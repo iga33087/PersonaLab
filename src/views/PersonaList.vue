@@ -1,7 +1,7 @@
 <template>
   <div class="PersonaList">
     <Dialog ref="moreDialog"></Dialog>
-    <Title :text="currentRoute.meta.title"></Title>
+    <Title :text="currentRoute.meta.title" :showSort="true"></Title>
     <div>
       <ListItem v-for="(item,index) in $store.getters.getPersona" :data="item" :key="index" @showMore="showMore"></ListItem>
     </div>
