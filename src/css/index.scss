@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 $color1:rgba(0,0,0,1);
 $color2:rgba(228,10,24,1);
 
@@ -7,17 +9,30 @@ $fontSize3:1.5rem;
 $fontSize4:1.8rem;
 $fontSize5:2rem;
 
-$clipPath1:polygon(2% 9%, 100% 0, 96% 92%, 0 100%);
+$clipPath1:polygon(2% 9%, 98% 0, 96% 92%, 0 100%);
 $clipPath2:polygon(1% 14%, 100% 0, 97% 94%, 4% 95%);
 $clipPath3:polygon(12% 13%, 91% 20%, 70% 95%, 22% 83%);
 $clipPath4:polygon(0 57%, 83% 91%, 73% 0);
+$moreClipPath:polygon(25% 15%, 100% 20%, 74% 86%, 0 65%);
+$dialogClipPath:polygon(23% 4%, 93% 0, 98% 13%, 100% 100%, 79% 97%, 0 100%, 0 49%, 14% 37%);
+
+@mixin rwd($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// @include rwd($sm) {
+//     height: 60px;
+//     line-height: 60px;
+//   }
 
 html,body {
   padding: 0;
   margin: 0;
   height: 100%;
   background-color: $color2;
-  font-family: "微軟正黑體";
+  font-family: 'Anton', sans-serif;
   color:#fff;
 }
 
@@ -137,57 +152,80 @@ html,body {
   background-color: $color1;
 }
 
-.select {
+.listItem {
+  height: 150px;
+  background-color: #fff;
+  clip-path: $clipPath1;
+  margin-top: -16px;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 0.1s;
+  &:hover {
+    transform: scale(1.2,1.2);
+    z-index: 2;
+  }
+  .listItemContent {
+    height: 100%;
+    background-color: $color1;
+    clip-path: $clipPath2;
+    transform: scale(0.9,0.9);
+  }
   .personaBox {
+    height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 40px 0 100px;
   }
-  .personaName {
-    font-weight: bold;
+  .personaBoxData {
+    display: flex;
+    align-items: center;
   }
   .Arcana {
-    padding: 10px;
-    box-sizing: border-box;
     background-color: #fff;
-    color:#000;
-    font-size: 30px;
-    font-weight: bold;
+    padding: 20px;
     border-radius: 10px;
+    color:#000;
+    font-weight: bold;
+    font-size: $fontSize3;
     margin: 0 20px 0 0;
   }
-  .selectItem{
-    width: 600px;
-    height: 100px;
+  .Name {
+    font-size: $fontSize3;
+  }
+  .personaBoxMore {
+    padding: 50px;
+    font-size: $fontSize3;
     background-color: #fff;
-    margin: -12px 0 0 0;
     color:#000;
-    cursor: pointer;
-    &:nth-child(odd){
-      clip-path: $clipPath1;
-    }
-    &:nth-child(even){
-      clip-path: $clipPath2;
-    }
+    clip-path: $moreClipPath;
+    font-style: italic;
+    transition-duration: 0.2s;
     &:hover {
-      background-color: #f00;
+      background-color: $color2;
+      color:#fff;
     }
   }
-  .selectItemContent {
-    width: 600px;
-    height: 100px;
-    transform: scale(0.9,0.9);
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    padding: 0 50px;
+}
+
+.dialog {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  position: fixed;
+  top:0;
+  left:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 97;
+  .dialogBox {
+    width: 80%;
+    height: 80%;
     box-sizing: border-box;
-    font-size: 30px;
-    color:#fff;
-    &:nth-child(odd){
-      clip-path: $clipPath2;
-    }
-    &:nth-child(even){
-      clip-path: $clipPath1;
-    }
+    background-color: #111;
+    clip-path: $dialogClipPath;
+    z-index: 98;
+    border: 20px solid #fff;
   }
 }

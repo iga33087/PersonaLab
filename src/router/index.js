@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
@@ -8,7 +7,18 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: () => import('../views/Home.vue'),
+    meta: {
+      title:"合體模擬"
+    }
+  },
+  {
+    path: '/PersonaList',
+    name: 'PersonaList',
+    component: () => import('../views/PersonaList.vue'),
+    meta: {
+      title:"面具一覽"
+    }
   }
 ]
 
