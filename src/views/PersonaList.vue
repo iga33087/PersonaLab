@@ -2,15 +2,16 @@
   <div class="PersonaList">
     <Dialog ref="moreDialog" title="More">
       <div>1111111111111111111111111111111111111111111111</div>
-      <Chart :label="'攻'" :max="99" :width="500" :num="99"></Chart>
-      <Chart :label="'魔'" :max="99" :width="500" :num="99"></Chart>
-      <Chart :label="'耐'" :max="99" :width="500" :num="99"></Chart>
-      <Chart :label="'速'" :max="99" :width="500" :num="99"></Chart>
-      <Chart :label="'運'" :max="99" :width="500" :num="99"></Chart>
+      <Chart :label="'攻'" :max="99" :width="'100%'" :num="2"></Chart>
+      <Chart :label="'魔'" :max="99" :width="'100%'" :num="10"></Chart>
+      <Chart :label="'耐'" :max="99" :width="'100%'" :num="20"></Chart>
+      <Chart :label="'速'" :max="99" :width="'100%'" :num="30"></Chart>
+      <Chart :label="'運'" :max="99" :width="'100%'" :num="90"></Chart>
+      <ListItem v-for="(item,index) in $store.getters.getPersona" :data="item" :key="index"></ListItem>
     </Dialog>
     <Title :text="currentRoute.meta.title" :showSort="true"></Title>
     <div>
-      <ListItem v-for="(item,index) in $store.getters.getPersona" :data="item" :key="index" @showMore="showMore"></ListItem>
+      <ListItem v-for="(item,index) in $store.getters.getPersona" :key="index" :data="item" @showMore="showMore"></ListItem>
     </div>
   </div>
 </template>
