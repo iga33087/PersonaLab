@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+$xs: 375px;
+$sm: 575.98px;
+$md: 767.98px;
+$lg: 991.98px;
+$xl: 1200px;
+
 $color1:rgba(0,0,0,1);
 $color2:rgba(228,10,24,1);
 
@@ -14,7 +20,8 @@ $clipPath2:polygon(2% 10%, 99% 0, 97% 93%, 5% 100%);
 $clipPath3:polygon(12% 13%, 91% 20%, 70% 95%, 22% 83%);
 $clipPath4:polygon(0 57%, 83% 91%, 73% 0);
 $moreClipPath:polygon(25% 15%, 100% 20%, 74% 86%, 0 65%);
-$dialogClipPath:polygon(23% 4%, 93% 0, 98% 13%, 100% 100%, 79% 97%, 0 100%, 0 49%, 14% 37%);
+$dialogClipPath:polygon(2% 0, 97% 1%, 100% 13%, 98% 87%, 100% 99%, 0 100%, 2% 79%, 0 28%);
+$dialogTitleClipPath:polygon(0 8%, 100% 26%, 93% 84%, 75% 85%, 90% 100%, 65% 87%, 13% 93%);
 
 @mixin rwd($breakpoint) {
   @media (max-width: $breakpoint) {
@@ -62,6 +69,12 @@ html,body {
   width: 1200px;
   min-height: calc(100% - 100px);
   margin: 0 auto;
+  @include rwd($lg) {
+    width: 100%;
+  }
+  @include rwd($sm) {
+    overflow: hidden;
+  } 
 }
 
 .loading {
@@ -177,6 +190,9 @@ html,body {
   cursor: pointer;
   position: relative;
   transition-duration: 0.1s;
+  @include rwd($sm) {
+    height: auto;
+  } 
   &:hover {
     transform: scale(1.2,1.2);
     z-index: 2;
@@ -204,10 +220,17 @@ html,body {
     align-items: center;
     justify-content: space-between;
     padding: 0 40px 0 100px;
+    @include rwd($sm) {
+      display: block;
+      padding: 20px;
+    } 
   }
   .personaBoxData {
     display: flex;
     align-items: center;
+    @include rwd($sm) {
+      margin-top: 20px;
+    } 
   }
   .Arcana {
     background-color: #fff;
@@ -226,6 +249,7 @@ html,body {
     font-size: $fontSize3;
     background-color: #fff;
     color:#000;
+    text-align: center;
     clip-path: $moreClipPath;
     font-style: italic;
     transition-duration: 0.2s;
@@ -250,27 +274,59 @@ html,body {
   z-index: 97;
   .dialogBox {
     width: 80%;
-    min-height: 80%;
+    height: 80%;
+    position: relative;
+  }
+  .dialogBoxContent {
+    width: 100%;
+    height: 100%;
+    padding: 100px 0 0 50px;
     box-sizing: border-box;
     background-color: #111;
     clip-path: $dialogClipPath;
     z-index: 98;
     border: 20px solid #fff;
-    position: relative;
-    &::after {
-      content: "";
-      width: 100px;
-      height: 100px;
-      background-color: #000;
-      position: absolute;
-      top:0;
-      left:0;
-    }
+    position: relative;   
+    color:#fff;
   }
-  .title {
+  .dialogBoxTitle {
+    width: 300px;
+    height: 150px;
+    clip-path: $dialogTitleClipPath;
     position: absolute;
-    top:0;
-    left:0;
-  
+    top:-50px;
+    left:-90px;
+    color:#000;
+    background-color: #fff;
+    z-index: 99;
+    display: flex;
+    font-size: $fontSize4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+}
+
+.chart {
+  display: flex;
+  align-items: center;
+  .chartLabel {
+    margin: 0 10px 0 0;
+    font-size: $fontSize3;
+    font-weight: bold;
+  }
+  .chartBar {
+    width: 0px;
+    padding: 8px;
+    background-color: #fff;
+    transition-duration: 0.2s;
+  }
+  .chartBarLine {
+    width: 0px;
+    background-color: $color2;
+    transition-duration: 0.2s;
+  }
+}
+.chart+.chart {
+  margin: -8px 0 0 0;
 }

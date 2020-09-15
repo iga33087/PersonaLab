@@ -1,23 +1,24 @@
 <template>
   <transition name="bounce">
     <div class="dialog" @click="toSwitch(false)" v-if="show">
-      <div class="dialogBox" @click.stop v-if="show">
-        <Title :text="'アルセーヌ'"></Title>
+      <div class="dialogBox" @click.stop>
+        <div class="dialogBoxTitle">{{title}}</div>
+        <div class="dialogBoxContent">
+          <slot></slot>
+        </div>
       </div>
     </div>
   </transition>
 </template>
 
 <script>
-import Title from "@/components/title.vue"
-
 export default {
+  props:["title"],
   data() {
     return {
       show:false
     }
   },
-  components:{Title},
   methods: {
     toSwitch(x) {
       this.show=x
