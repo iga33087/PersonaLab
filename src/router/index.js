@@ -19,6 +19,14 @@ Vue.use(VueRouter)
     meta: {
       title:"面具一覽"
     }
+  },
+  {
+    path: '/PersonaDetail/:Name',
+    name: 'PersonaDetail',
+    component: () => import('../views/PersonaDetail.vue'),
+    meta: {
+      title:"面具詳情"
+    }
   }
 ]
 

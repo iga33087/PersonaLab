@@ -17,7 +17,7 @@ export default {
   },
   computed: {
     percent() {
-      return this.clientWidth/this.max
+      return (this.clientWidth-16)/this.max
     }
   },
   mounted() {

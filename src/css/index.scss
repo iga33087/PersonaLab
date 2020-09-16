@@ -19,9 +19,15 @@ $clipPath1:polygon(2% 9%, 98% 0, 96% 92%, 0 100%);
 $clipPath2:polygon(2% 10%, 99% 0, 97% 93%, 5% 100%);
 $clipPath3:polygon(12% 13%, 91% 20%, 70% 95%, 22% 83%);
 $clipPath4:polygon(0 57%, 83% 91%, 73% 0);
+
 $moreClipPath:polygon(25% 15%, 100% 20%, 74% 86%, 0 65%);
+
 $dialogClipPath:polygon(2% 0, 97% 1%, 100% 13%, 98% 87%, 100% 99%, 0 100%, 2% 79%, 0 28%);
 $dialogTitleClipPath:polygon(0 8%, 100% 26%, 93% 84%, 75% 85%, 90% 100%, 65% 87%, 13% 93%);
+
+$barClipPath1:polygon(0 0, 100% 0, 99.5% 100%, 0 100%);
+
+$barLineClipPath1:polygon(0 0, 99% 19%, 100% 100%, 0 100%);
 
 @mixin rwd($breakpoint) {
   @media (max-width: $breakpoint) {
@@ -322,12 +328,14 @@ html,body {
   .chartBar {
     width: 0px;
     padding: 8px;
+    clip-path: $barClipPath1;
     box-sizing: border-box;
     background-color: #fff;
     transition-duration: 0.8s;
   }
   .chartBarLine {
     width: 0px;
+    clip-path: $barLineClipPath1;
     background-color: $color2;
     transition-duration: 0.8s;
   }
