@@ -4,9 +4,7 @@ import router from './router'
 import store from './store'
 import global from "./js/global.js"
 import "./css/index.scss"
-import VueAnimate from 'vue-animate-scroll'
 
-Vue.use(VueAnimate)
 Vue.prototype.$global=global
 Vue.config.productionTip = false
 
