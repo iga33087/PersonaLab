@@ -11,7 +11,9 @@
     </Dialog>
     <Title :text="currentRoute.meta.title" :showSort="true"></Title>
     <div>
-      <ListItem v-for="(item,index) in $store.getters.getPersona" :key="index" :data="item" @showMore="showMore"></ListItem>
+      <ListItem v-for="(item,index) in $store.getters.getPersona" :key="index">
+        <PersonaBox :data="item" @showMore="showMore"></PersonaBox>
+      </ListItem>
     </div>
   </div>
 </template>
@@ -19,6 +21,7 @@
 <script>
 import Title from "@/components/title.vue"
 import ListItem from "@/components/listItem.vue"
+import PersonaBox from "@/components/personaBox.vue"
 import Dialog from "@/components/dialog.vue"
 import Chart from "@/components/chart.vue"
 
@@ -28,7 +31,7 @@ export default {
       showMoreDialog:false
     }
   },
-  components:{Title,ListItem,Dialog,Chart},
+  components:{Title,ListItem,PersonaBox,Dialog,Chart},
   computed: {
     currentRoute() {
       return this.$router.currentRoute
