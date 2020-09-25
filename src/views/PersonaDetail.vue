@@ -9,7 +9,10 @@
       <Chart :label="'運'" :max="99" :width="'100%'" :num="99"></Chart>
     </div>
     <div>
-      <ListItem v-for="(item,index) in $store.getters.getPersona" :key="index" :data="item"></ListItem>
+      <h2>合成組合 合計: {{list.length}} 種</h2>
+      <ListItem v-for="(item,index) in list" :key="index">
+        <PersonaBox :twoData="item"></PersonaBox>
+      </ListItem>
     </div>
   </div>
 </template>
@@ -18,13 +21,15 @@
 import Title from "@/components/title.vue"
 import ListItem from "@/components/listItem.vue"
 import Chart from "@/components/chart.vue"
+import PersonaBox from "@/components/personaBox.vue"
 
 export default {
   data() {
     return {
+      list:[]
     }
   },
-  components:{Title,ListItem,Chart},
+  components:{Title,ListItem,Chart,PersonaBox},
   computed: {
     getPersonaData() {
       return this.$store.state.persona.filter(res=>res.Name==this.getParams.Name)[0]
@@ -39,11 +44,13 @@ export default {
       return this.$store.state.combination.filter(res=>res.Name==this.getPersonaData.Arcana)[0].item
     }
   },
-  created() {
-    console.log(this.currentRoute)
-    console.log(this.getPersonaData)
-    console.log(this.getArcanaList)
+  async created() {
+    this.$store.state.loading=true
     document.title=this.getParams.Name
+    await this.$global.delay(0)
+    this.list=await this.$global.getCombinationListByPersona(this.getPersonaData)
+    console.log(this.list)
+    this.$store.state.loading=false
   }
 }
 </script>
