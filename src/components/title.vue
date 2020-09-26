@@ -5,8 +5,8 @@
         {{text}}
       </div>
       <div class="titleSort" v-if="showSort">
-        <div class="titleSortItem" :class="{'titleSortChange':$store.state.sortBy=='Lv'}" @click="changeSort('Lv')">LV排序</div>
-        <div class="titleSortItem" :class="{'titleSortChange':$store.state.sortBy=='Arcana'}" @click="changeSort('Arcana')">阿爾卡納排序</div>
+        <div class="titleSortItem clipPath1" :class="{'titleSortChange':$store.state.sortBy=='Lv'}" @click="changeSort('Lv')">LV排序</div>
+        <div class="titleSortItem clipPath2" :class="{'titleSortChange':$store.state.sortBy=='Arcana'}" @click="changeSort('Arcana')">阿爾卡納排序</div>
       </div>
     </div>
   </transition>

@@ -27,6 +27,18 @@ Vue.use(VueRouter)
     meta: {
       title:"面具詳情"
     }
+  },
+  {
+    path: '/Error404',
+    name: 'Error404',
+    component: () => import('../views/Error404.vue'),
+    meta: {
+      title:"找不到此頁面"
+    }
+  },
+  {
+    path: '*',
+    redirect: '/Error404'
   }
 ]
 

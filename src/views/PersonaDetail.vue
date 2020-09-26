@@ -45,6 +45,10 @@ export default {
     }
   },
   async created() {
+    if(!this.getPersonaData) {
+      this.$router.push({name:"Error404"})
+      return 0
+    }
     this.$store.state.loading=true
     document.title=this.getParams.Name
     await this.$global.delay(0)
