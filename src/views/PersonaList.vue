@@ -28,20 +28,18 @@ import Chart from "@/components/chart.vue"
 export default {
   data() {
     return {
-      showMoreDialog:false
+      showMoreDialog:false,
     }
   },
   components:{Title,ListItem,PersonaBox,Dialog,Chart},
   computed: {
     currentRoute() {
       return this.$router.currentRoute
-    },
-    getArcanaList() {  //取得所選Persona阿爾卡納的合成表
-      return this.$store.state.combination.filter(res=>res.Name==this.changePersona.Arcana)[0].item
     }
   },
   created() {
     console.log(this.currentRoute)
+    console.log("searchResult",this.searchResult)
   },
   methods: {
     showMore(x) {

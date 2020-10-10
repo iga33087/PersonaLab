@@ -374,18 +374,23 @@ html,body {
 
   }
   .searchArcanaList {
-    width: 500px;
-    display: inline-block;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .searchArcanaListItem {
-    display: inline-block;
     background-color: #fff;
-    width: 100px;
+    padding: 10px;
     border-radius: 10px;
     color:#000;
     font-weight: bold;
     font-size: $fontSize3;
-    margin: 0 20px 0 0;
+    margin: 0 20px 20px 0;
+    cursor: pointer;
+    transition-duration: 0.2s;
+  }
+  .searchArcanaListItemOnChange {
+    background-color: $color2;
+    color:#fff;
   }
 }

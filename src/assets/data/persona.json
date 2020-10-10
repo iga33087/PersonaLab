@@ -90,7 +90,11 @@
   {"Lv":17,"Name":"マタドール","Arcana":"死神"},
   {"Lv":18,"Name":"シキオウジ","Arcana":"戦車"},
   {"Lv":18,"Name":"ブラックウーズ","Arcana":"月"},
-  {"Lv":19,"Name":"フラロウス","Arcana":"悪魔"},
+  {"Lv":19,"Name":"フラロウス","Arcana":"悪魔","threeMore":true,"formula":[
+    {"Lv":9,"Name":"ベリス","Arcana":"法王"},
+    {"Lv":16,"Name":"エリゴール","Arcana":"皇帝"},
+    {"Lv":17,"Name":"オロバス","Arcana":"法王"}
+  ]},
   {"Lv":19,"Name":"リャナンシー","Arcana":"恋愛"},
   {"Lv":20,"Name":"オニ","Arcana":"剛毅"},
   {"Lv":20,"Name":"スクーンの石","Arcana":"運命","rare":true,"bound":{
@@ -165,7 +169,11 @@
   
   {"Lv":27,"Name":"アンドラス","Arcana":"悪魔"},
   {"Lv":27,"Name":"クロト","Arcana":"運命"},
-  {"Lv":27,"Name":"タムリン","Arcana":"信念"},
+  {"Lv":27,"Name":"タムリン","Arcana":"信念","threeMore":true,"formula":[
+    {"Lv":5,"Name":"ケットシー","Arcana":"魔術師"},
+    {"Lv":16,"Name":"ハイピクシー","Arcana":"愚者"},
+    {"Lv":19,"Name":"リャナンシー","Arcana":"恋愛"}
+  ]},
 
   {"Lv":28,"Name":"コロンゾン","Arcana":"魔術師"},
   {"Lv":28,"Name":"ピシャーチャ","Arcana":"死神"},
@@ -173,7 +181,11 @@
   {"Lv":29,"Name":"プリンシパリティ","Arcana":"正義"},
   
   {"Lv":30,"Name":"アラミタマ","Arcana":"戦車"},
-  {"Lv":30,"Name":"ネコショウグン","Arcana":"星"},
+  {"Lv":30,"Name":"ネコショウグン","Arcana":"星","threeMore":true,"formula":[
+    {"Lv":11,"Name":"コダマ","Arcana":"星"},
+    {"Lv":17,"Name":"スダマ","Arcana":"隠者"},
+    {"Lv":25,"Name":"アンズー","Arcana":"法王"}
+  ]},
   {"Lv":30,"Name":"オルロフ","Arcana":"剛毅","rare":true,"bound":{
     "愚者":-1,
     "魔術師":1,
@@ -243,7 +255,11 @@
   {"Lv":36,"Name":"キウン","Arcana":"星"},
   {"Lv":36,"Name":"トート","Arcana":"皇帝"},
   
-  {"Lv":37,"Name":"ヘルズエンジェル","Arcana":"死神"},
+  {"Lv":37,"Name":"ヘルズエンジェル","Arcana":"死神","threeMore":true,"formula":[
+    {"Lv":14,"Name":"アークエンジェル","Arcana":"正義"},
+    {"Lv":17,"Name":"マタドール","Arcana":"死神"},
+    {"Lv":32,"Name":"デカラビア","Arcana":"顧問官"}
+  ]},
   {"Lv":37,"Name":"ベルフェゴール","Arcana":"塔"},
   
   {"Lv":38,"Name":"ホワイトライダー","Arcana":"戦車"},
@@ -307,7 +323,11 @@
   {"Lv":48,"Name":"ランダ","Arcana":"魔術師"},
   
   {"Lv":49,"Name":"コウモクテン","Arcana":"隠者"},
-  {"Lv":49,"Name":"バグス","Arcana":"愚者"},
+  {"Lv":49,"Name":"バグス","Arcana":"愚者","threeMore":true,"formula":[
+    {"Lv":2,"Name":"ピクシー","Arcana":"恋愛"},
+    {"Lv":28,"Name":"ピシャーチャ","Arcana":"死神"},
+    {"Lv":40,"Name":"ハリティー","Arcana":"女帝"}
+  ]},
   
   {"Lv":50,"Name":"サラスヴァティ","Arcana":"女教皇"},
   {"Lv":50,"Name":"ダーキニー","Arcana":"女帝"},
@@ -337,7 +357,12 @@
     "顧問官":1
   }},
   
-  {"Lv":51,"Name":"セト","Arcana":"塔"},
+  {"Lv":51,"Name":"セト","Arcana":"塔","threeMore":true,"formula":[
+    {"Lv":26,"Name":"イシス","Arcana":"女教皇"},
+    {"Lv":34,"Name":"アヌビス","Arcana":"審判"},
+    {"Lv":36,"Name":"トート","Arcana":"皇帝"},
+    {"Lv":47,"Name":"ホルス","Arcana":"太陽"}
+  ]},
   {"Lv":51,"Name":"ジャターユ","Arcana":"刑死者"},
   
   {"Lv":52,"Name":"ガルーダ","Arcana":"星"},
@@ -362,7 +387,12 @@
   {"Lv":58,"Name":"メルキセデク","Arcana":"正義"},
   {"Lv":58,"Name":"バフォメット","Arcana":"悪魔"},
   
-  {"Lv":59,"Name":"トランペッター","Arcana":"審判"},
+  {"Lv":59,"Name":"トランペッター","Arcana":"審判","threeMore":true,"formula":[
+    {"Lv":38,"Name":"ホワイトライダー","Arcana":"戦車"},
+    {"Lv":41,"Name":"レッドライダー","Arcana":"塔"},
+    {"Lv":54,"Name":"ペイルライダー","Arcana":"死神"},
+    {"Lv":59,"Name":"ブラックライダー","Arcana":"塔"}
+  ]},
   {"Lv":59,"Name":"ブラックライダー","Arcana":"塔"},
   
   {"Lv":60,"Name":"リリス","Arcana":"月"},
@@ -410,10 +440,18 @@
   {"Lv":66,"Name":"ケツアルカトル","Arcana":"太陽"},
   {"Lv":66,"Name":"オベロン","Arcana":"皇帝"},
   
-  {"Lv":67,"Name":"ジャアクフロスト","Arcana":"愚者"},
+  {"Lv":67,"Name":"ジャアクフロスト","Arcana":"愚者","threeMore":true,"formula":[
+    {"Lv":2,"Name":"ジャックランタン","Arcana":"魔術師"},
+    {"Lv":11,"Name":"ジャックフロスト","Arcana":"魔術師"},
+    {"Lv":61,"Name":"キングフロスト","Arcana":"皇帝"}
+  ]},
   {"Lv":67,"Name":"ビシャモンテン","Arcana":"法王"},
   
-  {"Lv":68,"Name":"ヴァスキ","Arcana":"星"},
+  {"Lv":68,"Name":"ヴァスキ","Arcana":"星","threeMore":true,"formula":[
+    {"Lv":24,"Name":"ナーガ","Arcana":"隠者"},
+    {"Lv":44,"Name":"アナンタ","Arcana":"顧問官"},
+    {"Lv":55,"Name":"ナーガラジャ","Arcana":"節制"}
+  ]},
   {"Lv":68,"Name":"ドミニオン","Arcana":"正義"},
   
   {"Lv":69,"Name":"ラクシュミ","Arcana":"運命"},
@@ -435,9 +473,19 @@
   {"Lv":75,"Name":"アバドン","Arcana":"審判"},
   {"Lv":75,"Name":"サンダルフォン","Arcana":"月"},
   
-  {"Lv":76,"Name":"アスラおう","Arcana":"太陽"},
+  {"Lv":76,"Name":"アスラおう","Arcana":"太陽","threeMore":true,"formula":[
+    {"Lv":22,"Name":"ジコクテン","Arcana":"節制"},
+    {"Lv":31,"Name":"ゾウチョウテン","Arcana":"剛毅"},
+    {"Lv":49,"Name":"コウモクテン","Arcana":"隠者"},
+    {"Lv":67,"Name":"ビシャモンテン","Arcana":"法王"}
+  ]},
   {"Lv":76,"Name":"クー・フーリン","Arcana":"信念"},
-  {"Lv":76,"Name":"コウリュウ","Arcana":"法王"},
+  {"Lv":76,"Name":"コウリュウ","Arcana":"法王","threeMore":true,"formula":[
+    {"Lv":7,"Name":"ゲンブ","Arcana":"節制"},
+    {"Lv":16,"Name":"スザク","Arcana":"太陽"},
+    {"Lv":45,"Name":"ビャッコ","Arcana":"節制"},
+    {"Lv":62,"Name":"セイリュウ","Arcana":"顧問官"}
+  ]},
   
   {"Lv":77,"Name":"スカアハ","Arcana":"女教皇"},
   {"Lv":77,"Name":"ガブリエル","Arcana":"節制"},
@@ -445,18 +493,30 @@
   {"Lv":78,"Name":"ラファエル","Arcana":"恋愛"},
   
   {"Lv":80,"Name":"ウォフ・マナフ","Arcana":"顧問官"},
-  {"Lv":80,"Name":"スラオシャ","Arcana":"星"},
+  {"Lv":80,"Name":"スラオシャ","Arcana":"星","threeMore":true,"formula":[
+    {"Lv":33,"Name":"ミトラ","Arcana":"節制"},
+    {"Lv":39,"Name":"ミトラス","Arcana":"太陽"},
+    {"Lv":58,"Name":"メルキセデク","Arcana":"正義"},
+    {"Lv":60,"Name":"リリス","Arcana":"月"},
+    {"Lv":77,"Name":"ガブリエル","Arcana":"節制"}
+  ]},
   {"Lv":80,"Name":"ザオウゴンゲン","Arcana":"剛毅"},
   
   {"Lv":81,"Name":"アリラト","Arcana":"女帝"},
   {"Lv":81,"Name":"ウリエル","Arcana":"正義"},
   
   {"Lv":82,"Name":"バアル","Arcana":"皇帝"},
-  {"Lv":82,"Name":"シヴァ","Arcana":"審判","continue":true},
+  {"Lv":82,"Name":"シヴァ","Arcana":"審判","continue":true,"formula":[
+    {"Lv":52,"Name":"バロン","Arcana":"皇帝"},
+    {"Lv":48,"Name":"ランダ","Arcana":"魔術師"}
+  ]},
   {"Lv":82,"Name":"ベリアル","Arcana":"悪魔"},
   {"Lv":82,"Name":"アティス","Arcana":"刑死者"},
   
-  {"Lv":83,"Name":"アリス","Arcana":"死神","continue":true},
+  {"Lv":83,"Name":"アリス","Arcana":"死神","continue":true,"formula":[
+    {"Lv":82,"Name":"ベリアル","Arcana":"悪魔"},
+    {"Lv":74,"Name":"ネビロス","Arcana":"悪魔"}
+  ]},
   {"Lv":83,"Name":"スルト","Arcana":"魔術師"},
   {"Lv":83,"Name":"キュベレ","Arcana":"女教皇"},
   {"Lv":83,"Name":"ヴィシュヌ","Arcana":"愚者"},
@@ -464,29 +524,73 @@
   {"Lv":84,"Name":"ジークフリード","Arcana":"信念"},
   {"Lv":84,"Name":"ハスター","Arcana":"星"},
   {"Lv":84,"Name":"オーディン","Arcana":"皇帝"},
-  {"Lv":84,"Name":"アルダー","Arcana":"節制","continue":true},
-  
+  {"Lv":84,"Name":"アルダー","Arcana":"節制","continue":true,"formula":[
+    {"Lv":56,"Name":"パールヴァティ","Arcana":"恋愛"},
+    {"Lv":82,"Name":"シヴァ","Arcana":"審判"}
+  ]},
+
   {"Lv":85,"Name":"マザーハーロット","Arcana":"女帝"},
   {"Lv":85,"Name":"イシュタル","Arcana":"恋愛"},
   
   {"Lv":86,"Name":"フツヌシ","Arcana":"魔術師"},
   {"Lv":86,"Name":"ファフニール","Arcana":"隠者"},
   
-  {"Lv":87,"Name":"ミカエル","Arcana":"審判"},
-  {"Lv":87,"Name":"ヨシツネ","Arcana":"塔"},
+  {"Lv":87,"Name":"ミカエル","Arcana":"審判","threeMore":true,"formula":[
+    {"Lv":78,"Name":"ラファエル","Arcana":"恋愛"},
+    {"Lv":77,"Name":"ガブリエル","Arcana":"節制"},
+    {"Lv":81,"Name":"ウリエル","Arcana":"正義"}
+  ]},
+  {"Lv":87,"Name":"ヨシツネ","Arcana":"塔","threeMore":true,"formula":[
+    {"Lv":18,"Name":"シキオウジ","Arcana":"戦車"},
+    {"Lv":35,"Name":"アラハバキ","Arcana":"隠者"},
+    {"Lv":54,"Name":"オオクニヌシ","Arcana":"信念"},
+    {"Lv":57,"Name":"ヤタガラス","Arcana":"顧問官"},
+    {"Lv":86,"Name":"フツヌシ","Arcana":"魔術師"}
+  ]},
   {"Lv":87,"Name":"ベルゼブブ","Arcana":"悪魔"},
   
-  {"Lv":88,"Name":"シュウ","Arcana":"戦車"},
+  {"Lv":88,"Name":"シュウ","Arcana":"戦車","threeMore":true,"formula":[
+    {"Lv":38,"Name":"ホワイトライダー","Arcana":"戦車"},
+    {"Lv":42,"Name":"ヘカトンケイル","Arcana":"刑死者"},
+    {"Lv":64,"Name":"トール","Arcana":"戦車"},
+    {"Lv":76,"Name":"クー・フーリン","Arcana":"信念"},
+    {"Lv":87,"Name":"ヨシツネ","Arcana":"塔"}
+  ]},
   
-  {"Lv":89,"Name":"メタトロン","Arcana":"正義"},
-  {"Lv":89,"Name":"オンギョウキ","Arcana":"隠者"},
+  {"Lv":89,"Name":"メタトロン","Arcana":"正義","threeMore":true,"formula":[
+    {"Lv":29,"Name":"プリンシパリティ","Arcana":"正義"},
+    {"Lv":41,"Name":"パワー","Arcana":"正義"},
+    {"Lv":58,"Name":"メルキセデク","Arcana":"正義"},
+    {"Lv":68,"Name":"ドミニオン","Arcana":"正義"},
+    {"Lv":75,"Name":"サンダルフォン","Arcana":"月"},
+    {"Lv":87,"Name":"ミカエル","Arcana":"審判"}
+  ]},
+  {"Lv":89,"Name":"オンギョウキ","Arcana":"隠者","threeMore":true,"formula":[
+    {"Lv":23,"Name":"フウキ","Arcana":"星"},
+    {"Lv":24,"Name":"スイキ","Arcana":"月"},
+    {"Lv":25,"Name":"キンキ","Arcana":"戦車"}
+  ]},
   
   {"Lv":90,"Name":"マダ","Arcana":"塔"},
   
   {"Lv":92,"Name":"サタン","Arcana":"審判"},
   
-  {"Lv":93,"Name":"ルシファー","Arcana":"星"},
+  {"Lv":93,"Name":"ルシファー","Arcana":"星","threeMore":true,"formula":[
+    {"Lv":34,"Name":"アヌビス","Arcana":"審判"},
+    {"Lv":44,"Name":"アナンタ","Arcana":"顧問官"},
+    {"Lv":59,"Name":"トランペッター","Arcana":"審判"},
+    {"Lv":87,"Name":"ミカエル","Arcana":"審判"},
+    {"Lv":89,"Name":"メタトロン","Arcana":"正義"},
+    {"Lv":92,"Name":"サタン","Arcana":"審判"}
+  ]},
   {"Lv":93,"Name":"マリア","Arcana":"信念"},
   
-  {"Lv":95,"Name":"サタナエル","Arcana":"愚者"}
+  {"Lv":95,"Name":"サタナエル","Arcana":"愚者","threeMore":true,"formula":[
+    {"Lv":1,"Name":"アルセーヌ","Arcana":"愚者"},
+    {"Lv":25,"Name":"アンズー","Arcana":"法王"},
+    {"Lv":85,"Name":"イシュタル","Arcana":"恋愛"},
+    {"Lv":87,"Name":"ミカエル","Arcana":"審判"},
+    {"Lv":92,"Name":"サタン","Arcana":"審判"},
+    {"Lv":93,"Name":"ルシファー","Arcana":"星"}
+  ]}
 ]
