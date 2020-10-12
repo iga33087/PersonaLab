@@ -73,8 +73,7 @@ export default {
       for(let item of x) {
         arr.push(item)
       }
-      console.log("!!!!!!!!!!!!!!!!!!!!!!!!!",x)
-      return arr
+      return [arr]
     }
   }
 }

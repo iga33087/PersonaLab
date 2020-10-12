@@ -1,8 +1,10 @@
 <template>
   <transition name="bounce" appear>
     <div class="title">
-      <div class="titleText">
-        {{text}}
+      <div class="titleLeftBox">
+        <div class="titleLeftBoxZ1"></div>
+        <div class="titleLeftBoxZ2">{{text}}</div>
+        <div class="titleLeftBoxZ3">{{text}}</div>
       </div>
       <div class="titleSort" v-if="showSort">
         <div class="titleSortItem clipPath1" :class="{'titleSortChange':$store.state.sortBy=='Lv'}" @click="changeSort('Lv')">LV排序</div>

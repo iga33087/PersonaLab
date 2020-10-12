@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="searchKey">
-        
+      <input type="text">
     </div>
     <div class="searchSub" @click="sub">
       OK!
@@ -18,7 +18,7 @@
 export default {
   data() {
     return {
-      searchData:this.$store.state.searchData
+      searchData:JSON.parse(JSON.stringify(this.$store.state.searchData))
     }
   },
   methods: {

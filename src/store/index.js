@@ -14,6 +14,7 @@ export default new Vuex.Store({
     combination:combination,
     searchData: {
       Arcana:["愚者","魔術師","女教皇","女帝","皇帝","法王","恋愛","戦車","正義","隠者","運命","剛毅","刑死者","死神","節制","悪魔","塔","星","月","太陽","審判","信念","顧問官"],
+      key:"ーク"
     }
   },
   getters: {
@@ -21,7 +22,7 @@ export default new Vuex.Store({
       let arr=JSON.parse(JSON.stringify(state.persona))
       arr=arr.filter(res=> {
         for(let item of state.searchData.Arcana) {
-          if(res.Arcana==item) {
+          if(res.Arcana==item&&(res.Name.indexOf(state.searchData.key)!=-1||!state.searchData.key)) {
             return res
           }
         }
