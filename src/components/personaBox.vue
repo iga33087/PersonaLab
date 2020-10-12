@@ -5,7 +5,7 @@
         <div class="Arcana">{{data.Arcana}}</div>
         <div class="Name">{{data.Lv}}<b>・{{data.Name}}</b></div>
       </div>
-      <div class="personaBoxMore" @click="showMore">More</div>
+      <router-link :to="{name:'PersonaDetail',params:{'Name':data.Name}}" target="_blank"><div class="personaBoxMore">More</div></router-link>
     </template>
     <template v-if="twoData">
       <div class="personaBoxTwoData">

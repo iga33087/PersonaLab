@@ -12,7 +12,7 @@
     <Title :text="currentRoute.meta.title" :showSort="true"></Title>
     <div>
       <ListItem v-for="(item,index) in $store.getters.getPersona" :key="index">
-        <PersonaBox :data="item" @showMore="showMore"></PersonaBox>
+        <PersonaBox :data="item"></PersonaBox>
       </ListItem>
     </div>
   </div>
@@ -41,12 +41,12 @@ export default {
     console.log(this.currentRoute)
     console.log("searchResult",this.searchResult)
   },
-  methods: {
+  /*methods: {
     showMore(x) {
       this.$refs.moreDialog.toSwitch(true)
       console.log(x)
     }
-  }
+  }*/
 }
 </script>
 
